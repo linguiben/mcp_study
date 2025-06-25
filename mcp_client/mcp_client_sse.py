@@ -2,9 +2,10 @@
 import requests
 import json
 import time
+import mcp_server.local_tools as local_tools
 from sseclient import SSEClient
 # MCP client using SSE to communicate with the MCP server
-host_info = tools.get_host_info()
+host_info = local_tools.get_host_info()
 host_info = json.loads(host_info)
 print("[MCP Client] Host Info:", host_info)
 # MCP server URL

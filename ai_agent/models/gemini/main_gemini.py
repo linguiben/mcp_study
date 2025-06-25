@@ -2,15 +2,16 @@ from pydantic_ai.models.gemini import GeminiModel
 from pydantic_ai import Agent
 
 from dotenv import load_dotenv
-import tools.tools as tools
-import os
 import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../tools'))) # add tools to path
+import tools
 
 load_dotenv()
 
 # # set http_proxy from ./.env file
-# os.environ['HTTP_PROXY'] = 'http://127.0.0.1:8086'
-# os.environ['HTTPS_PROXY'] = 'http://127.0.0.1:8086'
+os.environ['HTTP_PROXY'] = 'http://127.0.0.1:8086'
+os.environ['HTTPS_PROXY'] = 'http://127.0.0.1:8086'
 # export HTTP_PROXY='http://localhost:8086' && export HTTPS_PROXY=${http_proxy}
 sys.stdout.reconfigure(encoding='utf-8') 
 

@@ -59,7 +59,7 @@ def ask_gemini_with_image(image_path: str, prompt: str) -> str:
             data=open(image_path, "rb").read(),
             mime_type="image/png"
         )
-        ontents = [
+        contents = [
             types.Content(
                 role="user",
                 parts=[

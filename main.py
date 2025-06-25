@@ -1,6 +1,11 @@
+import asyncio
+import logging
 from ai_agent import agent as agent
-agent.main()
+#logging.basicConfig(level=logging.DEBUG)
+asyncio.run(agent.main())
 
+# from ai_agent import agent_2 as agent
+# asyncio.run(agent.main())
 
 # promt = """ 
 # 把图中的数据转成csv格式，第一行为标题行，标题行的内容为：

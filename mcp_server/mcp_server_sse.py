@@ -7,7 +7,7 @@
 from mcp.server.fastmcp import FastMCP
 import mcp_server.tools as tools
 
-mcp = FastMCP("host info mcp") # Create a FastMCP instance with a name
+mcp = FastMCP("http-mcp") # Create a FastMCP instance with a name
 mcp.add_tool(tools.get_host_info) # Add the custom tool to the MCP instance
 
 @mcp.tool()

@@ -10,7 +10,7 @@ class TestAIMCPDemo(unittest.TestCase):
             [sys.executable, 'ai-mcp-demo.py'],
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
-            cwd=os.path.dirname(os.path.abspath(__file__)),
+            cwd=os.path.dirname(os.path.abspath`(__file__)),
             timeout=5
         )
         # 检查进程是否正常退出
